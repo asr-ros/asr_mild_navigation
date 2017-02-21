@@ -1,0 +1,6 @@
+image: map_labor_manual_rearranged_anteroom.pgm
+resolution: 0.01384
+origin: [-3.000000, -3.000000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196 

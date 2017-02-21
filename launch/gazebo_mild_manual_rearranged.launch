@@ -1,0 +1,7 @@
+<launch>
+
+<node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(find kinematic_chain_mild)/robot_description/labor_anteroom.world" respawn="false" output="screen">
+	<env name="GAZEBO_MODEL_PATH" value="$(find gazebo_models)" />	
+</node>
+
+</launch>

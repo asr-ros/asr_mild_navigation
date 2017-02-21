@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>asr_mild_navigation</name>
+  <version>1.0.0</version>
+  <description>The mild_navigation package. Launchfiles to start the navigation relevant nodes. Parameter for navigation and maps.</description>
+  <author>Aumann Florian, Borella Jocelyn, Dehmani Souheil, Marek Felix, Mayr Matthias, Meißner Pascal</author>
+  <maintainer email="pascal.meissner@kit.edu">Meißner Pascal</maintainer>
+  <license>BSD</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>kinematic_chain_mild</run_depend>
+  <run_depend>mild_fake_odom</run_depend>
+
+  <export>
+
+  </export>
+</package>

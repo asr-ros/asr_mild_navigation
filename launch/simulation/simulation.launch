@@ -1,0 +1,24 @@
+<launch>
+<param name="robot_description" textfile="$(find kinematic_chain_mild)/robot_description/mild.urdf" /> 
+  
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+   <param name="publish_frequency" value="15"/>
+</node>
+
+<node name="mild_fake_odom" pkg="mild_fake_odom" type="mild_fake_odom" required="true"/>
+
+<node   name="move_base" pkg="move_base" type="move_base" respawn="false"  output="screen">
+        <param name="controller_frequency" value="5.0"/>
+        <param name="planner_frequency" value="10"/>
+        <param name="base_global_planner" value="navfn/NavfnROS"/>
+        <param name="base_local_planner" value="ftc_local_planner/FTCPlanner" />
+        <rosparam file="$(find mild_navigation)/rsc/simulation/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find mild_navigation)/rsc/simulation/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+        <rosparam file="$(find mild_navigation)/rsc/simulation/global_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find mild_navigation)/rsc/simulation/local_costmap_params.yaml" command="load"/>        
+        <rosparam file="$(find mild_navigation)/rsc/simulation/ftc_local_planner_params.yaml" command="load"/>
+</node> 
+
+<node pkg="tf" type="static_transform_publisher" name="fake_map" args="0 0 0 0 0 0 1 map odom 100" />
+
+</launch>

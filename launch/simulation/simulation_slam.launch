@@ -1,0 +1,7 @@
+<launch>
+
+<include file="$(find mild_navigation)/launch/simulation/simulation.launch" />
+
+<node name="map_server" pkg="map_server" type="map_server" args="$(find mild_navigation)/rsc/maps/map_labor_high_resolution.yaml" required="true"/>
+
+</launch>
