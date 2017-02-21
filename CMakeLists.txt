@@ -79,7 +79,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES mild_navigation
-  CATKIN_DEPENDS kinematic_chain_mild
+  CATKIN_DEPENDS asr_mild_kinematic_chain
 #  DEPENDS system_lib
 )
 

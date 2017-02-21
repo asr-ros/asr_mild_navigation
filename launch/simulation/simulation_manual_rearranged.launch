@@ -1,7 +1,7 @@
 <launch>
 
-<include file="$(find mild_navigation)/launch/simulation/simulation.launch" />
+<include file="$(find asr_mild_navigation)/launch/simulation/simulation.launch" />
 
-<node name="map_server" pkg="map_server" type="map_server" args="$(find mild_navigation)/rsc/maps/map_labor_manual_rearranged_anteroom.yaml" required="true"/>
+<node name="map_server" pkg="map_server" type="map_server" args="$(find asr_mild_navigation)/rsc/maps/map_labor_manual_rearranged_anteroom.yaml" required="true"/>
 
 </launch>

@@ -1,20 +1,20 @@
 <launch>
- <param name="robot_description" textfile="$(find kinematic_chain_mild)/robot_description/mild.urdf" /> 
+ <param name="robot_description" textfile="$(find asr_mild_kinematic_chain)/robot_description/mild.urdf" /> 
  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 
- <node  name="map_server" pkg="map_server" type="map_server" args="$(find mild_navigation)/rsc/maps/map_labor_manual_rearranged_anteroom.yaml" required="true"/> 
- <include  file="$(find mild_navigation)/launch/amcl_diff.launch" />
+ <node  name="map_server" pkg="map_server" type="map_server" args="$(find asr_mild_navigation)/rsc/maps/map_labor_manual_rearranged_anteroom.yaml" required="true"/> 
+ <include  file="$(find asr_mild_navigation)/launch/amcl_diff.launch" />
     
  <node   name="move_base" pkg="move_base" type="move_base" respawn="false"  output="screen">
    <param name="controller_frequency" value="5"/>
    <param name="planner_frequency" value="5"/>
    <param name="base_global_planner" value="navfn/NavfnROS"/>
    <param name="base_local_planner" value="ftc_local_planner/FTCPlanner" />
-   <rosparam file="$(find mild_navigation)/rsc/costmap_common_params.yaml" command="load" ns="global_costmap"/>
-   <rosparam file="$(find mild_navigation)/rsc/costmap_common_params.yaml" command="load" ns="local_costmap"/>
-   <rosparam file="$(find mild_navigation)/rsc/global_costmap_params.yaml" command="load"/>
-   <rosparam file="$(find mild_navigation)/rsc/local_costmap_params.yaml" command="load"/>
-   <rosparam file="$(find mild_navigation)/rsc/ftc_local_planner_params.yaml" command="load"/>
+   <rosparam file="$(find asr_mild_navigation)/rsc/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+   <rosparam file="$(find asr_mild_navigation)/rsc/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+   <rosparam file="$(find asr_mild_navigation)/rsc/global_costmap_params.yaml" command="load"/>
+   <rosparam file="$(find asr_mild_navigation)/rsc/local_costmap_params.yaml" command="load"/>
+   <rosparam file="$(find asr_mild_navigation)/rsc/ftc_local_planner_params.yaml" command="load"/>
  </node>
 
 </launch>
