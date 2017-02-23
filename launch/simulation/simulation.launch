@@ -7,7 +7,7 @@
 
 <node name="asr_mild_base_fake_driving" pkg="asr_mild_base_fake_driving" type="asr_mild_base_fake_driving" required="true"/>
 
-<node   name="asr_move_base" pkg="asr_move_base" type="asr_move_base" respawn="false"  output="screen">
+<node   name="move_base" pkg="move_base" type="move_base" respawn="false"  output="screen">
         <param name="controller_frequency" value="5.0"/>
         <param name="planner_frequency" value="10"/>
         <param name="base_global_planner" value="navfn/NavfnROS"/>
