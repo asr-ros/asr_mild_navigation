@@ -9,5 +9,5 @@ FTCPlanner:
   slow_down_factor: 2.5
   sim_time: 0.6
   local_planner_frequence: 5
-  join_obstacle: true
+  join_obstacle: false
   
