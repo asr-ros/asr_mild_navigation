@@ -8,7 +8,7 @@
  <node   name="move_base" pkg="move_base" type="move_base" respawn="false"  output="screen">
    <param name="controller_frequency" value="5"/>
    <param name="planner_frequency" value="5"/>
-   <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
+   <param name="base_global_planner" value="navfn/NavfnROS"/>
    <param name="base_local_planner" value="ftc_local_planner/FTCPlanner" />
    <rosparam file="$(find asr_mild_navigation)/rsc/costmap_common_params.yaml" command="load" ns="global_costmap"/>
    <rosparam file="$(find asr_mild_navigation)/rsc/costmap_common_params.yaml" command="load" ns="local_costmap"/>
