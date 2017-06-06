@@ -6,6 +6,7 @@
   <author>Aumann Florian, Borella Jocelyn, Dehmani Souheil, Marek Felix, Mayr Matthias, Meißner Pascal</author>
   <maintainer email="pascal.meissner@kit.edu">Meißner Pascal</maintainer>
   <license>BSD</license>
+  <url type="website">http://wiki.ros.org/asr_mild_navigation</url>
   
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>asr_mild_kinematic_chain</run_depend>
