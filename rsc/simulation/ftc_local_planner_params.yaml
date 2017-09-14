@@ -8,5 +8,5 @@ FTCPlanner:
   rotation_accuracy: 0.03
   slow_down_factor: 2.5
   sim_time: 0.75
-  local_planner_frequence: 5
-  join_obstacle: true
+  local_planner_frequence: 3
+  join_obstacle: false
