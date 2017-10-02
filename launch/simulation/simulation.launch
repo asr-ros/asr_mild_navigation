@@ -12,11 +12,11 @@
         <param name="planner_frequency" value="3"/>
         <param name="base_global_planner" value="asr_navfn/NavfnROS"/>
         <param name="base_local_planner" value="ftc_local_planner/FTCPlanner" />
-        <rosparam file="$(find asr_mild_navigation)/rsc/simulation/costmap_common_params.yaml" command="load" ns="global_costmap"/>
-        <rosparam file="$(find asr_mild_navigation)/rsc/simulation/costmap_common_params.yaml" command="load" ns="local_costmap"/>
-        <rosparam file="$(find asr_mild_navigation)/rsc/simulation/global_costmap_params.yaml" command="load"/>
-        <rosparam file="$(find asr_mild_navigation)/rsc/simulation/local_costmap_params.yaml" command="load"/>        
-        <rosparam file="$(find asr_mild_navigation)/rsc/simulation/ftc_local_planner_params.yaml" command="load"/>
+        <rosparam file="$(find asr_mild_navigation)/param/simulation/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find asr_mild_navigation)/param/simulation/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+        <rosparam file="$(find asr_mild_navigation)/param/simulation/global_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find asr_mild_navigation)/param/simulation/local_costmap_params.yaml" command="load"/>        
+        <rosparam file="$(find asr_mild_navigation)/param/simulation/ftc_local_planner_params.yaml" command="load"/>
 </node> 
 
 <node pkg="tf" type="static_transform_publisher" name="fake_map" args="0 0 0 0 0 0 1 map odom 100" />
