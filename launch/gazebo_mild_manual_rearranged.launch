@@ -1,6 +1,6 @@
 <launch>
 
-<node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(find asr_mild_kinematic_chain)/robot_description/labor_anteroom.world" respawn="false" output="screen">
+<node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(find asr_mild_kinematic_chain)/room_description/labor_anteroom.world" respawn="false" output="screen">
 	<env name="GAZEBO_MODEL_PATH" value="$(find asr_gazebo_models)" />	
 </node>
 
